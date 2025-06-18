@@ -9,7 +9,7 @@ function Homepage() {
     <>
       <div className="SplitText">
         <SplitText
-          text="React Boiler Test1!"
+          text="React Boiler Hi Hello!"
           className=""
           delay={100}
           duration={0.6}
