@@ -1,6 +1,6 @@
 # React + TypeScript + Vite
 
-# Click [here]([https://deep0902.github.io/personal-expense-tracker-demo/](https://deep0902.github.io/for-reacts-sake/)) to view the app
+# Click [here]([https://deep0902.github.io/personal-expense-tracker-demo/](https://deep0902.github.io/for-reacts-sake/) to view the app
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
