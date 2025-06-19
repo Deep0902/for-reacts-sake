@@ -46,6 +46,7 @@
 .parallax {
   position: relative;
   overflow: hidden;
+  height: 14vh;
 }
 
 .scroller {

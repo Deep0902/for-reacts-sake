@@ -1,15 +1,14 @@
-import ScrollReveal from "../ReactBits/ScrollReveal";
+import { LinkPreview } from "../Aceternity/LinkPreview";
 import ScrollVelocity from "../ReactBits/ScrollVelocity";
 import ShinyText from "../ReactBits/ShinyText";
-import Threads from "../ReactBits/Threads";
 import SplitText from "../ReactBits/SplitText";
-import "./Homepage.css"
+import "./Homepage.css";
 function Homepage() {
   return (
     <>
       <div className="SplitText">
         <SplitText
-          text="React Boiler Hi Hello!"
+          text="React Boiler Aceternity added!"
           className=""
           delay={100}
           duration={0.6}
@@ -22,9 +21,9 @@ function Homepage() {
           textAlign="center"
         />
       </div>
-      <div className="Thread">
+      {/* <div className="Thread">
         <Threads amplitude={1} distance={0.5} enableMouseInteraction={true} />
-      </div>
+      </div> */}
       <div className="ShinyText">
         <ShinyText
           text="Just some shiny text!"
@@ -37,14 +36,14 @@ function Homepage() {
       <div className="scroll-velocity">
         <ScrollVelocity
           texts={[
-            "The sky is clear and blue above the mountains",
+            "The sky is clear and blue above the mountains.",
             "Beneath, the river flows gently through the valley.",
           ]}
           velocity={60}
           className="custom-scroll-text"
         />
       </div>
-      <div className="scroll-reveal">
+      {/* <div className="scroll-reveal">
         <ScrollReveal
           baseOpacity={0}
           enableBlur={true}
@@ -62,10 +61,29 @@ function Homepage() {
           humor and a dash of imagination can turn the blandest placeholder into
           a feast for the senses!
         </ScrollReveal>
+      </div> */}
+      {/* <div className="Thread">
+        <BackgroundBeams />
+      </div> */}
+      <div className="hover-text">
+        Check out &nbsp;
+        <LinkPreview
+          url="https://tailwindcss.com"
+          className="font-bold remove-decorations"
+        >
+          <strong>Tailwind CSS</strong>
+        </LinkPreview>
       </div>
-
       <div className="empty-block"></div>
     </>
   );
 }
 export default Homepage;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: [
+      "api.microlink.io", // Microlink Image Preview
+    ],
+  },
+};

@@ -21,7 +21,7 @@ body {
   width: 99%;
   height: 600px;
   position: absolute;
-  top: 0;
+  top: -8vh;
 }
 .magnet {
   width: 100%;
@@ -30,7 +30,7 @@ body {
 }
 .empty-block {
   width: 98dvw;
-  height: 50vh;
+  height: 40vh;
 }
 .scroll-reveal {
   display: flex;
@@ -40,4 +40,17 @@ body {
 }
 .scroll-velocity {
   color: #bdbdbd;
+}
+.Cover {
+  height: 200px;
+}
+.hover-text{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  .remove-decorations{
+    text-decoration: none;
+    color: inherit;
+  }
 }
