@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Homepage from "./components/Homepage";
+import Homepage from "./components/Homepage/Homepage";
 import { useEffect } from "react";
 import Lenis from "lenis";
+import Projects from "./components/Projects/Projects";
+import LandingPage from "./components/LandingPage/LandingPage";
 
 function App() {
   useEffect(() => {
@@ -27,13 +29,17 @@ function App() {
     return () => window.removeEventListener("wheel", handleWheel);
   }, []);
   return (
-    <>
-      <Router>
-        <Routes>
-          <Route index path="/for-reacts-sake" element={<Homepage />} />
-        </Routes>
-      </Router>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/for-reacts-sake" element={<Homepage />} />
+        <Route path="/for-reacts-sake/projects" element={<Projects />} />
+        <Route
+          index
+          path="/for-reacts-sake/landing-page"
+          element={<LandingPage />}
+        />
+      </Routes>
+    </Router>
   );
 }
 

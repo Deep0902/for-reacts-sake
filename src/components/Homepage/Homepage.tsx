@@ -1,9 +1,21 @@
-import { LinkPreview } from "../Aceternity/LinkPreview";
-import ScrollVelocity from "../ReactBits/ScrollVelocity";
-import ShinyText from "../ReactBits/ShinyText";
-import SplitText from "../ReactBits/SplitText";
+import { useNavigate } from "react-router-dom";
+import { LinkPreview } from "../../Aceternity/LinkPreview";
+import { TextHoverEffect } from "../../Aceternity/TextHover";
+import GradientText from "../../ReactBits/GradientText";
+import ScrollVelocity from "../../ReactBits/ScrollVelocity";
+import ShinyText from "../../ReactBits/ShinyText";
+import SplitText from "../../ReactBits/SplitText";
+import Threads from "../../ReactBits/Threads";
 import "./Homepage.css";
 function Homepage() {
+  const navigate = useNavigate();
+  const navigateToLandingPage = () => {
+    navigate("/for-reacts-sake/landing-page");
+  };
+  const doNothing = () => {
+    return;
+  };
+
   return (
     <>
       <div className="SplitText">
@@ -21,9 +33,9 @@ function Homepage() {
           textAlign="center"
         />
       </div>
-      {/* <div className="Thread">
+      <div className="Thread">
         <Threads amplitude={1} distance={0.5} enableMouseInteraction={true} />
-      </div> */}
+      </div>
       <div className="ShinyText">
         <ShinyText
           text="Just some shiny text!"
@@ -74,16 +86,36 @@ function Homepage() {
           <strong>Tailwind CSS</strong>
         </LinkPreview>
       </div>
+
+      <div className="gradient-text">
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={() => {
+            navigateToLandingPage();
+          }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              navigateToLandingPage();
+            }
+          }}
+          style={{ cursor: "pointer" }}
+        >
+          <GradientText
+            colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+            animationSpeed={3}
+            showBorder={false}
+            className="custom-class"
+          >
+            Add a splash of color!
+          </GradientText>
+        </div>
+      </div>
       <div className="empty-block"></div>
+      {/* <div className="text-hover-effect">
+        <TextHoverEffect text="ACET" />
+      </div> */}
     </>
   );
 }
 export default Homepage;
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    domains: [
-      "api.microlink.io", // Microlink Image Preview
-    ],
-  },
-};

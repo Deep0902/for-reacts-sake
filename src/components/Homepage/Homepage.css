@@ -44,13 +44,24 @@ body {
 .Cover {
   height: 200px;
 }
-.hover-text{
+.hover-text {
   text-align: center;
   font-size: 24px;
   font-weight: 600;
   text-decoration: none;
-  .remove-decorations{
+  .remove-decorations {
     text-decoration: none;
     color: inherit;
   }
+}
+.text-hover-effect {
+  height: 40vh;
+  font-size: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.gradient-text{
+  font-size: 40px;
 }
